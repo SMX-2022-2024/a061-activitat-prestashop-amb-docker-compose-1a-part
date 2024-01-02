@@ -39,14 +39,14 @@ Els **volums definits** a l'arxiu **```docker-compose.yml```** hauran de ser el 
 |**```prestashop```**|**```./data```**|**```/var/www/html```**|
 |**```mysql```**|**```./db```**|**```/var/lib/mysql```**|
 
-### **1.3.** Polítiques de reinici de Docker
+### **1.4.** Polítiques de reinici de Docker
 
 Caldrà fer ùs de la política de reinici per als dos contenidors per que es reiniciin cada vegada que es detenguin de forma inesperada.
 
 > [!TIP]
 > Es recomana consultar [la **documentació oficial** de l'opció **```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
 
-### **1.3** Variables d'entorn
+### **1.5** Variables d'entorn
 
 Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de l'entorn necessaries a l'arxiu **```docker-compose.yml```**.
 
