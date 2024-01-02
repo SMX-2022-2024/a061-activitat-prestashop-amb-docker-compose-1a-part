@@ -343,7 +343,7 @@ Per tant, cal que obri, **en el meu cas** un navegador amb l'adreça IP del meu 
 ![Alt text](./images/image_001.png)
 
 > [!IMPORTANT]
-> ## Un cop que heu arribat a aquest punt, no cal que, **de moment** feu res més!
+> ## Un cop que heu arribat a aquest punt, no cal que, **de moment**, feu res més!
 
 <!-- 
 ## **Pas 7**: Configuració de **PrestaShop**
