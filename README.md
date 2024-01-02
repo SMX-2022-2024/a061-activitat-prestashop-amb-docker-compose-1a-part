@@ -1,5 +1,5 @@
 <!-- https://josejuansanchez.org/iaw/practica-prestashop-docker/index.html -->
-
+ 
 # Activitat **```a10u```**: **```PrestaShop```** amb **```docker compose```**
 
 **Objectiu**: Instal·lació de **```PrestaShop```** utilitzant els contenidors **```Docker Compose```**
