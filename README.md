@@ -29,7 +29,7 @@ Només els serveis que estan a la xarxa **```frontend-network```** exposaran els
 
 A continuació es mostra un diagrama amb les xarxes i els serveis que té que crear:
 
-![diagrama.png](./diagrama.png)
+![diagrama.png](./images/diagrama.png)
 
 #### Polítiques de reinici de Docker
 
