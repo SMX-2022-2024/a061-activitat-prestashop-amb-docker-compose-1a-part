@@ -277,7 +277,7 @@ profe@docker-sxm:~/c03-ps$
 * **Opció D**:
 
 **```docker container list -aq```** **només** ens mostra l'identificador dels contenidors es troben en execució i **també**, dels contenidors que es troben aturats.
-</pre>
+<pre>
 profe@docker-sxm:~/c03-ps$ sudo docker container list -aq
 7cbb7c33f024
 bfd31bece05d
