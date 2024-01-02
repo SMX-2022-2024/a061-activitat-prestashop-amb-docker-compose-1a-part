@@ -4,7 +4,8 @@
 
 **Objectiu**: Instal·lació de **```PrestaShop```** utilitzant els contenidors **```Docker Compose```**
 
-Creació de la carpeta que contindrà el sistema de contenidors.
+
+## **Pas 1**: Creació de la carpeta que contindrà el sistema de contenidors.
 
 * Comanda a executar:
 
@@ -21,9 +22,9 @@ cd ~/c03-ps
 profe@docker-sxm:~/c03-ps$ 
 </pre>
 
-## **Pas 1**: Requisits de l'arxiu **```docker-compose.yml```**
+## **Pas 2**: Requisits de l'arxiu **```docker-compose.yml```**
 
-### **1.1.** Imatges
+### **2.1.** Imatges
 
 Les imatges que farem servir són:
 
@@ -95,7 +96,7 @@ profe@docker-sxm:~/c03-ps$
 >mysql        5.7       bdba757bc933   2 months ago   501MB
 ></pre>
 
-### **1.2.** Ports
+### **2.2.** Ports
 
 Només cal exposar el **```port```** **```8089```** del **host** i redirigir-lo al **```port```** **```80```** del contenidor amb el nom **```prestashop```**.
 
@@ -103,7 +104,7 @@ Només cal exposar el **```port```** **```8089```** del **host** i redirigir-lo 
 |---|---|---|
 |**```prestashop```**|**```8089```**|**```80```**|
 
-### **1.3.** Volums
+### **2.3.** Volums
 
 Els **volums definits** a l'arxiu **```docker-compose.yml```** hauran de ser el següents:
 
@@ -112,14 +113,14 @@ Els **volums definits** a l'arxiu **```docker-compose.yml```** hauran de ser el 
 |**```prestashop```**|**```./data```**|**```/var/www/html```**|
 |**```mysql```**|**```./db```**|**```/var/lib/mysql```**|
 
-### **1.4.** Polítiques de reinici de Docker
+### **2.4.** Polítiques de reinici de Docker
 
 Caldrà fer ùs de la política de reinici per als dos contenidors per que es reiniciin cada vegada que es detenguin de forma inesperada.
 
 > [!TIP]
 > Es recomana consultar [la **documentació oficial** de l'opció **```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
 
-### **1.5** Variables d'entorn
+### **2.5** Variables d'entorn
 
 Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de l'entorn necessaries a l'arxiu **```docker-compose.yml```**.
 
@@ -127,7 +128,7 @@ Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de 
 > A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
 
 <!--
-### **1.4**  Ordre en el que s'inicien els **serveis**
+### **2.4**  Ordre en el que s'inicien els **serveis**
 
 Cal indicar l'ordre en el que s'ha d'iniciar els serveis amb l'opció **```depends_on```**.
 
@@ -140,7 +141,7 @@ Per garantir que el servei de **```MySQL```** està llest per acceptar connexion
 > Es recomana la lectura de l'article [**```healthcheck```** - Compose file version 3 reference][https://docs.docker.com/compose/compose-file/compose-file-v3/#healthcheck].
 -->
 
-## **Pas 2**: Exemple d'arxiu **```docker-compose.yml```** utilitzant la imatge **```prestashop/prestashop```**
+## **Pas 3**: Exemple d'arxiu **```docker-compose.yml```** utilitzant la imatge **```prestashop/prestashop```**
 
 A continuació es mostra una possible solució de la pràctica utilitzant la imatge de **PrestaShop** **```prestashop/prestashop```** .
 
