@@ -35,7 +35,7 @@ A continuació es mostra un diagrama amb les xarxes i els serveis que té que cr
 
 Caldrà fer ùs d'alguna política de reinici per als contenidors que es reinicien cada vegada que es detenguin de forma inesperada.
 
-> ![INFO]
+> ![INFORMATION]
 >
 > Es recomana consultar [la **documentació oficial** de l'opció **```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
 
