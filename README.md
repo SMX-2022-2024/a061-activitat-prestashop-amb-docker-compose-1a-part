@@ -36,6 +36,7 @@ A continuació es mostra un diagrama amb les xarxes i els serveis que té que cr
 Caldrà fer ùs d'alguna política de reinici per als contenidors que es reinicien cada vegada que es detenguin de forma inesperada.
 
 > ![INFO]
+>
 > Es recomana consultar [la **documentació oficial** de l'opció **```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
 
 
@@ -44,5 +45,6 @@ Caldrà fer ùs d'alguna política de reinici per als contenidors que es reinici
 Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de l'entorn necessaries a l'arxiu **```docker-compose.yml```**.
 
 > ![INFO]
+>
 > A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
 
