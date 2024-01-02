@@ -18,7 +18,7 @@ cd ~/c03-prestashop
 Les imatges que farem servir són:
 
 |Contenidor|Imatge|**```tag```**|
-|---|---|---|---|
+|---|---|---|
 |**```prestashop```**|**```prestashop/prestashop```**|**```latest```**|
 |**```mysql```**|**```mysql```**|**```5.7```**|
 
@@ -27,7 +27,7 @@ Les imatges que farem servir són:
 Només cal exposar el **```port```** **```8089```** del **host** i redirigir-lo al **```port```** **```80```** del contenidor amb el nom **```prestashop```**.
 
 |Contenidor|Port del<br>host|Port del<br>contenidor|
-|---|---|---|---|
+|---|---|---|
 |**```prestashop```**|**```8089```**|**```80```**|
 
 ### **1.3.** Volums
@@ -35,7 +35,7 @@ Només cal exposar el **```port```** **```8089```** del **host** i redirigir-lo 
 Els **volums definits** a l'arxiu **```docker-compose.yml```** hauran de ser el següents:
 
 |Contenidor|carpeta<br>host|carpeta<br>contenidor|
-|---|---|---|---|
+|---|---|---|
 |**```prestashop```**|**```./data```**|**```/var/www/html```**|
 |**```mysql```**|**```./db```**|**```/var/lib/mysql```**|
 
