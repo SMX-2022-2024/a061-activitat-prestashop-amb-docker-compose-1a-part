@@ -264,7 +264,7 @@ I per **eliminar** una **llista de contenidors** contenidor cal que aquest estig
 > ```
 > **```docker container list -aq```** **només** ens mostra l'identificador dels contenidors es troben en execució i **també**, dels contenidors que es troben aturats.
 > <pre>
-> profe@docker-sxm:~/c03-ps$ sudo docker container remove $(sudo docker container list -aq)```**
+> profe@docker-sxm:~/c03-ps$ sudo docker container remove $(sudo docker container list -aq)
 > 7cbb7c33f024
 > bfd31bece05d
 > profe@docker-sxm:~/c03-ps$ 
