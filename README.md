@@ -4,6 +4,14 @@
 
 **Objectiu**: Instal·lació de **```PrestaShop```** utilitzant els contenidors **```Docker Compose```**
 
+
+Creació de la carpeta que contindrà el sistema de contenidors.
+
+```bash
+sudo mkdir ~/c03-prestashop
+cd ~/c03-prestashop
+```
+
 ## **Pas 1**: Requisits de l'arxiu **```docker-compose.yml```**
 
 ### **1.1.** Xarxes
@@ -45,8 +53,6 @@ Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de 
 > [!TIP]
 > A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
 
-
-
 ### **1.4**  Ordre en el que s'inicien els **serveis**
 
 Cal indicar l'ordre en el que s'ha d'iniciar els serveis amb l'opció **```depends_on```**.
@@ -63,6 +69,11 @@ Per garantir que el servei de **```MySQL```** està llest per acceptar connexion
 
 A continuació es mostra una possible solució de la pràctica utilitzant la imatge de **PrestaShop** **```prestashop/prestashop```** .
 
+
+```bash
+sudo vi ~/c03-prestashop/.env
+```
+
 * Contingut de l'arxiu **```.env```** que conté la configuració personal del sistema de contenidors:
 
 ```yml
@@ -77,6 +88,10 @@ PS_DOMAIN=localhost
 #PS_DOMAIN=iaw-test.ddns.net
 ADMIN_MAIL=admin@mail.es
 ADMIN_PASSWD=admin_password
+```
+
+```bash
+sudo vi ~/c03-prestashop/docker-compose.yml
 ```
 
 * Contingut de l'arxiu **```docker-compose.yml```**:
