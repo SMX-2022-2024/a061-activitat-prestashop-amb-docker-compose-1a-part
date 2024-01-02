@@ -7,8 +7,8 @@
 Creació de la carpeta que contindrà el sistema de contenidors.
 
 ```bash
-sudo mkdir ~/c03-prestashop
-cd ~/c03-prestashop
+sudo mkdir ~/c03-ps
+cd ~/c03-ps
 ```
 
 ## **Pas 1**: Requisits de l'arxiu **```docker-compose.yml```**
@@ -70,7 +70,7 @@ Per garantir que el servei de **```MySQL```** està llest per acceptar connexion
 A continuació es mostra una possible solució de la pràctica utilitzant la imatge de **PrestaShop** **```prestashop/prestashop```** .
 
 ```bash
-sudo vi ~/c03-prestashop/.env
+sudo vi ~/c03-ps/.env
 ```
 
 * Contingut de l'arxiu **```.env```** que conté la configuració personal del sistema de contenidors:
@@ -84,7 +84,7 @@ MYSQL_ROOT_PASSWORD=12345
 ```
 
 ```bash
-sudo vi ~/c03-prestashop/docker-compose.yml
+sudo vi ~/c03-ps/docker-compose.yml
 ```
 
 * Contingut de l'arxiu **```docker-compose.yml```**:
