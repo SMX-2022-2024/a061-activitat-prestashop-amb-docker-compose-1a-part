@@ -198,9 +198,7 @@ services:
     restart: always
 ```
 
-## **Pas 4**: Creació del sistema de contenidor configurats a l'arxiu **```docker-compose.yml```**
-
-### **4.1** Confirmació de que no hi ha cap contenidor
+## **Pas 4**: Aturar i eliminar **TOTS els contenidors** que tenim al servidor
 
 Primer veiem quins contenidors es troben tant en execució com aturats:
 
@@ -272,4 +270,85 @@ I per **eliminar** una **llista de contenidors** contenidor cal que aquest estig
 > profe@docker-sxm:~/c03-ps$ 
 > </pre>
 
-I 
+Un cop  que ja tenim **TOTS els contenidors** del nostre servidor eliminats podem procedir a crear i executar el nostre sistema de contenidors.
+
+## **Pas 5**: Creació del sistema de contenidors de **PrestaShop**
+
+Per crear el sistema de contenidors **PrestaShop** comencem per confirmar que no hi ha cap contenidor al nostre servidor.
+
+* Comanda a executar:
+
+```bash
+sudo docker container list -a
+```
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ sudo docker container list -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+profe@docker-sxm:~/c03-ps$ 
+</pre>
+
+> [!IMPORTANT]
+> Si la sortida no és aquesta, cal que torneu al [Pas 4: Aturar i eliminar **TOTS els contenidors** que tenim al servidor](#pas-4-aturar-i-eliminar-tots-els-contenidors-que-tenim-al-servidor)
+
+Un cop ja hem confirmat que no hi cap contenidor al nostre servidor, podem procedir a crear el sistema de contenidors de **PrestaShop**.
+
+Per crear el sistema de contenidors **PrestaShop** executarem la següent comanda des de la carpeta (**```~/c03-ps```**) que conté el sistema de contenidors.
+
+* Comanda a executar:
+
+```bash
+cd ~/c03-ps
+sudo docker compose up -d
+```
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ cd ~/c03-ps
+sudo docker compose up -d
+[+] Running 3/3
+ ✔ Network c03-ps_default         Created  0.1s
+ ✔ Container c03-ps-basedades-1   Started  0.2s 
+ ✔ Container c03-ps-prestashop-1  Started  0.2s 
+profe@docker-sxm:~/c03-ps$ 
+</pre>
+
+## **Pas 6**: Validació de que el sistema de contenidors de **PrestaShop** funciona correctament
+
+### **6.1** Obtenir l'adreça IP del nostre host
+ 
+* Comanda a executar:
+
+```bash
+ip a | grep 56
+```
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ ip a | grep 56
+    inet 192.168.56.122/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s8
+profe@docker-sxm:~/c03-ps$ 
+</pre>
+
+**En el meu cas** l'adreça IP del meu host és **```192.168.56.122```**
+
+### **6.2** Obrir amb el navegador l'adreça IP del nostre host
+
+Per tant, cal que obri, **en el meu cas** un navegador amb l'adreça IP del meu host és **```192.168.56.122```** seguida per **```:8099```**, que és el port que hem redirigit.
+
+![Alt text](./images/image_001.png)
+
+> [!IMPORTANT]
+> ## Un cop que heu arribat a aquest punt, no cal que, **de moment** feu res més!
+
+<!-- 
+## **Pas 7**: Configuració de **PrestaShop**
+
+![Alt text](./images/image_002.png)
+
+
+![Alt text](./images/image_003.png) -->
