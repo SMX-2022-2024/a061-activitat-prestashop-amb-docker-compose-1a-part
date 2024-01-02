@@ -145,6 +145,10 @@ Per garantir que el servei de **```MySQL```** està llest per acceptar connexion
 
 A continuació es mostra una possible solució de la pràctica utilitzant la imatge de **PrestaShop** **```prestashop/prestashop```** .
 
+### **3.1** Creació del fitxer **```.env```** per guardar les **variables d'entorn**
+
+* Comanda a executar:
+
 ```bash
 sudo vi ~/c03-ps/.env
 ```
@@ -159,6 +163,10 @@ MYSQL_PASSWORD=motdepasps
 MYSQL_ROOT_PASSWORD=motdepasroot
 ```
 
+### **3.2** Creació del fitxer **```docker-compose.yml```** amb la configuració del sistema de contenidors
+
+* Comanda a executar:
+
 ```bash
 sudo vi ~/c03-ps/docker-compose.yml
 ```
@@ -166,7 +174,7 @@ sudo vi ~/c03-ps/docker-compose.yml
 * Contingut de l'arxiu **```docker-compose.yml```**:
 
 ```yml
-version: "3"
+version: "3.0"
 services:
   prestashop:
     image: prestashop/prestashop
