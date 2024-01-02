@@ -153,10 +153,10 @@ sudo vi ~/c03-ps/.env
 
 ```yml
 # Configuració de l'acces a la base de dades
-MYSQL_DATABASE=exampledb
-MYSQL_USER=userps
-MYSQL_PASSWORD=passps
-MYSQL_ROOT_PASSWORD=12345
+MYSQL_DATABASE=pardodb
+MYSQL_USER=usuarips
+MYSQL_PASSWORD=motdepasps
+MYSQL_ROOT_PASSWORD=motdepasroot
 ```
 
 ```bash
