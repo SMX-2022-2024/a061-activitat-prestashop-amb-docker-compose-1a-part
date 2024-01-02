@@ -126,7 +126,8 @@ Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de 
 > [!TIP]
 > A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
 
-<!-- ### **1.4**  Ordre en el que s'inicien els **serveis**
+<!--
+### **1.4**  Ordre en el que s'inicien els **serveis**
 
 Cal indicar l'ordre en el que s'ha d'iniciar els serveis amb l'opció **```depends_on```**.
 
@@ -136,7 +137,8 @@ Cal indicar l'ordre en el que s'ha d'iniciar els serveis amb l'opció **```depen
 Per garantir que el servei de **```MySQL```** està llest per acceptar connexions, haurà d'utilitzar l'opció **```healthcheck```** de l'arxiu **```docker-compose.yml```**. 
 
 > [!TIP]
-> Es recomana la lectura de l'article [**```healthcheck```** - Compose file version 3 reference][https://docs.docker.com/compose/compose-file/compose-file-v3/#healthcheck].-->
+> Es recomana la lectura de l'article [**```healthcheck```** - Compose file version 3 reference][https://docs.docker.com/compose/compose-file/compose-file-v3/#healthcheck].
+-->
 
 ## **Pas 2**: Exemple d'arxiu **```docker-compose.yml```** utilitzant la imatge **```prestashop/prestashop```**
 
