@@ -53,45 +53,47 @@ mysql                     5.7            bdba757bc933   2 months ago   501MB
 profe@docker-sxm:~/c03-ps$ 
 </pre>
 
-Es pot mostrar la informació de les imatges segons un criteri de cerca.
 
-**Exemple 1**: si volem veure només aquelles imatges amb el **nom** **```prestashop/prestashop```**
-
-* Comanda a executar:
-
-```bash
-sudo docker image list --filter reference=prestashop/prestashop
-```
-
-* Sortida:
-
-<pre>
-profe@docker-sxm:~/c03-ps$ sudo docker image list --filter reference=prestashop/prestashop
-REPOSITORY              TAG       IMAGE ID       CREATED        SIZE
-prestashop/prestashop   1.7       6e6ff1a2495e   2 hours ago    1.24GB
-prestashop/prestashop   latest    9712f852ca81   3 months ago   1.42GB
-prestashop/prestashop   1.7.8     fe5bfe08a491   4 months ago   1.24GB
-profe@docker-sxm:~/c03-ps$ 
-</pre>
-
-**Exemple 2**: si volem veure només aquelles imatges amb el **nom** **```mysql```**
-
-* Comanda a executar:
-
-```bash
-sudo docker image list --filter reference=mysql
-```
-
-* Sortida:
-
-<pre>
-profe@docker-sxm:~/c03-ps$ sudo docker image list --filter reference=mysql
-
-REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
-mysql        8         73246731c4b0   2 weeks ago    619MB
-mysql        5.7       bdba757bc933   2 months ago   501MB
-</pre>
-
+> [!TIP]
+> 
+>Es pot mostrar la informació de les imatges segons un criteri de cerca.
+>
+>**Exemple 1**: si volem veure només aquelles imatges amb el **nom** **```prestashop/prestashop```**
+>
+>* Comanda a executar:
+>
+>```bash
+>sudo docker image list --filter reference=prestashop/prestashop
+>```
+>
+>* Sortida:
+>
+><pre>
+>profe@docker-sxm:~/c03-ps$ sudo docker image list --filter reference=prestashop/prestashop
+>REPOSITORY              TAG       IMAGE ID       CREATED        SIZE
+>prestashop/prestashop   1.7       6e6ff1a2495e   2 hours ago    1.24GB
+>prestashop/prestashop   latest    9712f852ca81   3 months ago   1.42GB
+>prestashop/prestashop   1.7.8     fe5bfe08a491   4 months ago   1.24GB
+>profe@docker-sxm:~/c03-ps$ 
+></pre>
+>
+>**Exemple 2**: si volem veure només aquelles imatges amb el **nom** **```mysql```**
+>
+>* Comanda a executar:
+>
+>```bash
+>sudo docker image list --filter reference=mysql
+>```
+>
+>* Sortida:
+>
+><pre>
+>profe@docker-sxm:~/c03-ps$ sudo docker image list --filter reference=mysql
+>
+>REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+>mysql        8         73246731c4b0   2 weeks ago    619MB
+>mysql        5.7       bdba757bc933   2 months ago   501MB
+></pre>
 
 ### **1.2.** Ports
 
