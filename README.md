@@ -113,19 +113,21 @@ Els **volums definits** a l'arxiu **```docker-compose.yml```** hauran de ser el 
 |**```prestashop```**|**```./data```**|**```/var/www/html```**|
 |**```mysql```**|**```./db```**|**```/var/lib/mysql```**|
 
-### **2.4.** Polítiques de reinici de Docker
+### **2.4** Variables d'entorn
+
+Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de l'entorn necessaries a l'arxiu **```docker-compose.yml```**.
+
+> [!TIP]
+> A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
+
+
+### **2.5.** Polítiques de reinici de Docker
 
 Caldrà fer ùs de la política de reinici per als dos contenidors per que es reiniciin cada vegada que es detenguin de forma inesperada.
 
 > [!TIP]
 > Es recomana consultar [la **documentació oficial** de l'opció **```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
 
-### **2.5** Variables d'entorn
-
-Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de l'entorn necessaries a l'arxiu **```docker-compose.yml```**.
-
-> [!TIP]
-> A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
 
 <!--
 ### **2.4**  Ordre en el que s'inicien els **serveis**
@@ -186,14 +188,14 @@ services:
 
   basedades:
     image: mysql:5.7
-    restart: always
+    volumes:
+    - ./db:/var/lib/mysql
     environment:
     - MYSQL_DATABASE=pardodb
     - MYSQL_USER=usuarips
     - MYSQL_PASSWORD=motdepasps
     - MYSQL_ROOT_PASSWORD=motdepasroot
-    volumes:
-    - ./db:/var/lib/mysql
+    restart: always
 ```
 
 
