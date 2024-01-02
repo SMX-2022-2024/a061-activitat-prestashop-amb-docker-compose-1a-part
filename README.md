@@ -143,9 +143,9 @@ Per garantir que el servei de **```MySQL```** està llest per acceptar connexion
 > Es recomana la lectura de l'article [**```healthcheck```** - Compose file version 3 reference][https://docs.docker.com/compose/compose-file/compose-file-v3/#healthcheck].
 -->
 
-## **Pas 3**: Exemple d'arxiu **```docker-compose.yml```** utilitzant la imatge **```prestashop/prestashop```**
+## **Pas 3**: Creació de l'arxiu **```docker-compose.yml```** usant la imatge **```prestashop/prestashop```**
 
-A continuació es mostra una possible solució de la pràctica utilitzant la imatge de **PrestaShop** **```prestashop/prestashop```** .
+A continuació es mostra una possible solució de la pràctica utilitzant la imatge de **PrestaShop** **```prestashop/prestashop```**.
 
 ### **3.1** Creació del fitxer **```.env```** per guardar les **variables d'entorn**
 
@@ -197,5 +197,91 @@ services:
     - MYSQL_ROOT_PASSWORD=motdepasroot
     restart: always
 ```
+
+## **Pas 4**: Creació del sistema de contenidor configurats a l'arxiu **```docker-compose.yml```**
+
+### **4.1** Confirmació de que no hi ha cap contenidor
+
+Primer veiem quins contenidors es troben tant en execució com aturats:
+
+* Comanda a executar:
+
+```bash
+sudo docker container list -a
+```
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ sudo docker container list -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS                 PORTS                                   NAMES
+7cbb7c33f024   nginx     "/docker-entrypoint.…"   4 weeks ago    Exited (0) 4 weeks ago                                         joannginx2
+bfd31bece05d   nginx     "/docker-entrypoint.…"   2 months ago   Up 2 months            0.0.0.0:8800->80/tcp, :::8800->80/tcp   joannginx
+profe@docker-sxm:~/c03-ps$  
+</pre>
+
+Veiem que hi ha dos contenidors, un amb el nom **```joannginx2```** que està aturat i un altre amb el nom **```joannginx```** que està en execució.
+
+Per aturar un contenidor cal executar la comanda **```docker container stop``` &lt;```Nom del contenidor o l'ID```>**
+Per eliminar un contenidor cal que aquest estigui aturat i cal executar la comanda **```docker container remove``` &lt;```Nom del contenidor o l'ID```>**
+
+Com hem vist la comanda **```docker container list```** ens mostra molta informació d'aquells contenidors que es troben en execució.
+
+Amb el parametre **```-a```** (de **all** en anglès), ens mostra molta informació, també, dels contenidors que es troben aturats.
+
+Val a dir, que hi ha un altre parametre **```-q```** (de **quit** **silenci** en anglès) que, en comptes de mostrar-nos molta informació, **només** ens mostra l'identificador dels contenidors.
+
+Per tant, combinant aquests dos parametres tenim:
+
+* **Opció A**:
+
+**```docker container list```** ens mostra molta informació d'aquells contenidors que es troben en execució.
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ sudo docker container list
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS                 PORTS                                   NAMES
+bfd31bece05d   nginx     "/docker-entrypoint.…"   2 months ago   Up 2 months            0.0.0.0:8800->80/tcp, :::8800->80/tcp   joannginx
+profe@docker-sxm:~/c03-ps$  
+</pre>
+
+* **Opció B**:
+
+**```docker container list -a```** ens mostra molta informació, **també**, dels contenidors que es troben aturats.
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ sudo docker container list -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS                 PORTS                                   NAMES
+7cbb7c33f024   nginx     "/docker-entrypoint.…"   4 weeks ago    Exited (0) 4 weeks ago                                         joannginx2
+bfd31bece05d   nginx     "/docker-entrypoint.…"   2 months ago   Up 2 months            0.0.0.0:8800->80/tcp, :::8800->80/tcp   joannginx
+profe@docker-sxm:~/c03-ps$  
+</pre>
+
+
+* **Opció C**:
+
+**```docker container list -q```** **només** ens mostra l'identificador dels contenidors es troben en execució.
+
+
+* Sortida:
+
+<pre>
+profe@docker-sxm:~/c03-ps$ sudo docker container list -q
+bfd31bece05d
+profe@docker-sxm:~/c03-ps$ 
+</pre>
+
+* **Opció D**:
+
+**```docker container list -aq```** **només** ens mostra l'identificador dels contenidors es troben en execució i **també**, dels contenidors que es troben aturats.
+</pre>
+profe@docker-sxm:~/c03-ps$ sudo docker container list -aq
+7cbb7c33f024
+bfd31bece05d
+profe@docker-sxm:~/c03-ps$ 
+</pre>
 
 
