@@ -117,7 +117,8 @@ Els **volums definits** a l'arxiu **```docker-compose.yml```** hauran de ser el 
 Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de l'entorn necessaries a l'arxiu **```docker-compose.yml```**.
 
 > [!TIP]
-> A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** [**Substituïu-lo amb un fitxer ```.env```**](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
+> A la documentació oficial podeu trobar més informació sobre com fer l'ús de variables d'entorn a l'arxiu **```docker-compose.yml```** al següent enllaç [**Compose file ->
+Substitute with an **```.env```** file** (***Fitxer ```Compose``` -> Substituïu-lo amb un fitxer ```.env```***)](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
 
 
 ### **2.5.** Polítiques de reinici de Docker
@@ -125,7 +126,7 @@ Cal fer servir un fitxer **```.env```** per emmagatzemar totes les variables de 
 Caldrà fer ùs de la política de reinici per als dos contenidors per que es reiniciin cada vegada que es detenguin de forma inesperada.
 
 > [!TIP]
-> Es recomana consultar [la **documentació oficial** de l'opció **```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
+> Es recomana consultar la **documentació oficial** [**Compose file version 3 reference -> ```restart```**](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart).
 
 
 <!--
