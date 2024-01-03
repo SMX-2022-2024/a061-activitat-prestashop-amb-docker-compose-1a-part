@@ -237,6 +237,8 @@ profe@docker-sxm:~/c03-ps$
 Per tant, si volem **aturar** una **llista de contenidors** cal executar la comanda **```docker container stop``` &lt;```llista dels ID's```>**
 
 > [!WARNING]
+> ### **Aturar TOTS els contenidors**
+>
 > Per tant per poder **aturar** **TOTS els contenidors** que tenim al servidor, ja estiguin aturats o no, podem fer servir la comanda:
 > **```sudo docker container stop $(sudo docker container stop -aq)```**
 > * Comanda a executar:
@@ -255,6 +257,8 @@ Per tant, si volem **aturar** una **llista de contenidors** cal executar la coma
 I per **eliminar** una **llista de contenidors** contenidor cal que aquest estigui aturat i cal executar la comanda **```docker container remove``` &lt;```llista dels ID's```>**
 
 > [!WARNING]
+> ### **Eliminar TOTS els contenidors**
+>
 > Per tant per **eliminar** **TOTS els contenidors** que tenim al servidor, que ja estiguin aturats, podem fer servir la comanda: **```sudo docker container remove $(sudo docker container list -aq)```**
 >
 > * Comanda a executar:
