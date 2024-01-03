@@ -290,7 +290,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 profe@docker-sxm:~/c03-ps$ 
 </pre>
 
-> [!IMPORTANT]
+> [!WARNING]
 > Si la sortida no és aquesta, cal que torneu al [Pas 4: Aturar i eliminar **TOTS els contenidors** que tenim al servidor](#pas-4-aturar-i-eliminar-tots-els-contenidors-que-tenim-al-servidor)
 
 Un cop ja hem confirmat que no hi cap contenidor al nostre servidor, podem procedir a crear el sistema de contenidors de **PrestaShop**.
