@@ -1,9 +1,8 @@
 <!-- https://josejuansanchez.org/iaw/practica-prestashop-docker/index.html -->
  
-# Activitat **```a10u```**: **```PrestaShop```** amb **```docker compose```**
+# Activitat **```a06u```**: **```PrestaShop```** amb **```docker compose```**
 
 **Objectiu**: Instal·lació de **```PrestaShop```** utilitzant els contenidors **```Docker Compose```**
-
 
 ## **Pas 1**: Creació de la carpeta que contindrà el sistema de contenidors.
 
@@ -22,13 +21,13 @@ cd ~/c03-ps
 profe@docker-sxm:~/c03-ps$ 
 </pre>
 
-## **Pas 2**: Requisits de l'arxiu **```docker-compose.yml```**
+## **Pas 2**: Configuració dins de l'arxiu **```docker-compose.yml```**
 
 ### **2.1.** Imatges
 
 Les imatges que farem servir són:
 
-|Contenidor|Imatge|**```tag```**|
+|Nom del contenidor|Nom de la imatge|**```tag```**|
 |---|---|---|
 |**```prestashop```**|**```prestashop/prestashop```**|**```1.7```**|
 |**```mysql```**|**```mysql```**|**```5.7```**|
